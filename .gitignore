@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+.env*
+public/catalog.json
+public/scenarios.json
+public/llms.txt
+public/SKILL.md
+public/*.zip
