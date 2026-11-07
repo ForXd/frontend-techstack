@@ -1,0 +1,1699 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-07T10:01:01.615Z",
+  "period": {
+    "start": "2026-10-31",
+    "end": "2026-11-06"
+  },
+  "entries": {
+    "typescript": {
+      "stars": 111855,
+      "repository": "https://github.com/microsoft/TypeScript",
+      "starsSourceUrl": "https://api.github.com/repos/microsoft/TypeScript",
+      "observedAt": "2026-11-07T10:00:35.193Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "typescript",
+        "downloads": 417083884,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/typescript",
+        "observedAt": "2026-11-07T09:48:54.685Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "pnpm": {
+      "stars": 37020,
+      "repository": "https://github.com/pnpm/pnpm",
+      "starsSourceUrl": "https://api.github.com/repos/pnpm/pnpm",
+      "observedAt": "2026-11-07T10:00:35.202Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "pnpm",
+        "downloads": 325056371,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/pnpm",
+        "observedAt": "2026-11-07T09:48:56.922Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "nodejs": {
+      "stars": 123391,
+      "repository": "https://github.com/nodejs/node",
+      "starsSourceUrl": "https://api.github.com/repos/nodejs/node",
+      "observedAt": "2026-11-07T10:00:35.129Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": null,
+      "usageNote": "该实现没有可比的官方 npm 采用量；用户数与下载量未知，不记为零。"
+    },
+    "react": {
+      "stars": 252336,
+      "repository": "https://github.com/react/react",
+      "starsSourceUrl": "https://api.github.com/repos/react/react",
+      "observedAt": "2026-11-07T10:00:35.115Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "react",
+        "downloads": 252355743,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/react",
+        "observedAt": "2026-11-07T09:48:52.482Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "vue": {
+      "stars": 54840,
+      "repository": "https://github.com/vuejs/core",
+      "starsSourceUrl": "https://api.github.com/repos/vuejs/core",
+      "observedAt": "2026-11-07T10:00:35.090Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "vue",
+        "downloads": 25117305,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/vue",
+        "observedAt": "2026-11-07T09:48:50.282Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "angular": {
+      "stars": 101457,
+      "repository": "https://github.com/angular/angular",
+      "starsSourceUrl": "https://api.github.com/repos/angular/angular",
+      "observedAt": "2026-11-07T10:00:36.617Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@angular/core",
+        "downloads": 8409275,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40angular%2Fcore",
+        "observedAt": "2026-11-07T09:48:59.130Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "svelte": {
+      "stars": 88657,
+      "repository": "https://github.com/sveltejs/svelte",
+      "starsSourceUrl": "https://api.github.com/repos/sveltejs/svelte",
+      "observedAt": "2026-11-07T10:00:36.492Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "svelte",
+        "downloads": 9413758,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/svelte",
+        "observedAt": "2026-11-07T09:49:01.328Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "nextjs": {
+      "stars": 143375,
+      "repository": "https://github.com/vercel/next.js",
+      "starsSourceUrl": "https://api.github.com/repos/vercel/next.js",
+      "observedAt": "2026-11-07T10:00:36.369Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "next",
+        "downloads": 92267062,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/next",
+        "observedAt": "2026-11-07T09:49:03.534Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "nuxt": {
+      "stars": 61049,
+      "repository": "https://github.com/nuxt/nuxt",
+      "starsSourceUrl": "https://api.github.com/repos/nuxt/nuxt",
+      "observedAt": "2026-11-07T10:00:36.517Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "nuxt",
+        "downloads": 3244540,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/nuxt",
+        "observedAt": "2026-11-07T09:49:05.949Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "astro": {
+      "stars": 63800,
+      "repository": "https://github.com/withastro/astro",
+      "starsSourceUrl": "https://api.github.com/repos/withastro/astro",
+      "observedAt": "2026-11-07T10:00:36.384Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "astro",
+        "downloads": 11526912,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/astro",
+        "observedAt": "2026-11-07T09:49:08.159Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "sveltekit": {
+      "stars": 20902,
+      "repository": "https://github.com/sveltejs/kit",
+      "starsSourceUrl": "https://api.github.com/repos/sveltejs/kit",
+      "observedAt": "2026-11-07T10:00:37.785Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@sveltejs/kit",
+        "downloads": 4971739,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40sveltejs%2Fkit",
+        "observedAt": "2026-11-07T09:49:10.358Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "css-modules": {
+      "stars": 1624,
+      "repository": "https://github.com/madyankin/postcss-modules",
+      "starsSourceUrl": "https://api.github.com/repos/madyankin/postcss-modules",
+      "observedAt": "2026-11-07T10:00:37.653Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "postcss-modules",
+        "downloads": 5070667,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/postcss-modules",
+        "observedAt": "2026-11-07T09:49:12.335Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "tailwind": {
+      "stars": 98171,
+      "repository": "https://github.com/tailwindlabs/tailwindcss",
+      "starsSourceUrl": "https://api.github.com/repos/tailwindlabs/tailwindcss",
+      "observedAt": "2026-11-07T10:00:38.086Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "tailwindcss",
+        "downloads": 174871954,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/tailwindcss",
+        "observedAt": "2026-11-07T09:49:14.539Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "shadcn": {
+      "stars": 127550,
+      "repository": "https://github.com/shadcn-ui/ui",
+      "starsSourceUrl": "https://api.github.com/repos/shadcn-ui/ui",
+      "observedAt": "2026-11-07T10:00:37.894Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "shadcn",
+        "downloads": 17649340,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/shadcn",
+        "observedAt": "2026-11-07T09:49:16.738Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "antd": {
+      "stars": 100100,
+      "repository": "https://github.com/ant-design/ant-design",
+      "starsSourceUrl": "https://api.github.com/repos/ant-design/ant-design",
+      "observedAt": "2026-11-07T10:00:37.652Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "antd",
+        "downloads": 5376749,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/antd",
+        "observedAt": "2026-11-07T09:49:18.939Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "element-plus": {
+      "stars": 27838,
+      "repository": "https://github.com/element-plus/element-plus",
+      "starsSourceUrl": "https://api.github.com/repos/element-plus/element-plus",
+      "observedAt": "2026-11-07T10:00:39.121Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "element-plus",
+        "downloads": 793473,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/element-plus",
+        "observedAt": "2026-11-07T09:49:21.141Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "tanstack-query": {
+      "stars": 50533,
+      "repository": "https://github.com/TanStack/query",
+      "starsSourceUrl": "https://api.github.com/repos/TanStack/query",
+      "observedAt": "2026-11-07T10:00:39.285Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@tanstack/react-query",
+        "downloads": 83446614,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40tanstack%2Freact-query",
+        "observedAt": "2026-11-07T09:49:23.585Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "zustand": {
+      "stars": 58900,
+      "repository": "https://github.com/pmndrs/zustand",
+      "starsSourceUrl": "https://api.github.com/repos/pmndrs/zustand",
+      "observedAt": "2026-11-07T10:00:39.654Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "zustand",
+        "downloads": 91774693,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/zustand",
+        "observedAt": "2026-11-07T09:49:25.780Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "redux": {
+      "stars": 11244,
+      "repository": "https://github.com/reduxjs/redux-toolkit",
+      "starsSourceUrl": "https://api.github.com/repos/reduxjs/redux-toolkit",
+      "observedAt": "2026-11-07T10:00:39.121Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@reduxjs/toolkit",
+        "downloads": 47991538,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40reduxjs%2Ftoolkit",
+        "observedAt": "2026-11-07T09:49:27.759Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "pinia": {
+      "stars": 14759,
+      "repository": "https://github.com/vuejs/pinia",
+      "starsSourceUrl": "https://api.github.com/repos/vuejs/pinia",
+      "observedAt": "2026-11-07T10:00:39.303Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "pinia",
+        "downloads": 7434190,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/pinia",
+        "observedAt": "2026-11-07T09:49:29.962Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "zod": {
+      "stars": 44276,
+      "repository": "https://github.com/colinhacks/zod",
+      "starsSourceUrl": "https://api.github.com/repos/colinhacks/zod",
+      "observedAt": "2026-11-07T10:00:40.878Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "zod",
+        "downloads": 454840235,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/zod",
+        "observedAt": "2026-11-07T09:49:32.157Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "react-hook-form": {
+      "stars": 44907,
+      "repository": "https://github.com/react-hook-form/react-hook-form",
+      "starsSourceUrl": "https://api.github.com/repos/react-hook-form/react-hook-form",
+      "observedAt": "2026-11-07T10:00:40.793Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "react-hook-form",
+        "downloads": 61658960,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/react-hook-form",
+        "observedAt": "2026-11-07T09:49:34.357Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "babel": {
+      "stars": 44053,
+      "repository": "https://github.com/babel/babel",
+      "starsSourceUrl": "https://api.github.com/repos/babel/babel",
+      "observedAt": "2026-11-07T10:00:40.640Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@babel/core",
+        "downloads": 252104148,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40babel%2Fcore",
+        "observedAt": "2026-11-07T09:49:36.562Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "swc": {
+      "stars": 34209,
+      "repository": "https://github.com/swc-project/swc",
+      "starsSourceUrl": "https://api.github.com/repos/swc-project/swc",
+      "observedAt": "2026-11-07T10:00:40.682Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@swc/core",
+        "downloads": 58547929,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40swc%2Fcore",
+        "observedAt": "2026-11-07T09:49:38.768Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "esbuild": {
+      "stars": 40121,
+      "repository": "https://github.com/evanw/esbuild",
+      "starsSourceUrl": "https://api.github.com/repos/evanw/esbuild",
+      "observedAt": "2026-11-07T10:00:40.696Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "esbuild",
+        "downloads": 412387745,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/esbuild",
+        "observedAt": "2026-11-07T09:49:40.970Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "vite": {
+      "stars": 83851,
+      "repository": "https://github.com/vitejs/vite",
+      "starsSourceUrl": "https://api.github.com/repos/vitejs/vite",
+      "observedAt": "2026-11-07T10:00:42.182Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "vite",
+        "downloads": 260744685,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/vite",
+        "observedAt": "2026-11-07T09:49:43.397Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "webpack": {
+      "stars": 65995,
+      "repository": "https://github.com/webpack/webpack",
+      "starsSourceUrl": "https://api.github.com/repos/webpack/webpack",
+      "observedAt": "2026-11-07T10:00:42.304Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "webpack",
+        "downloads": 74723040,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/webpack",
+        "observedAt": "2026-11-07T09:49:45.370Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "rspack": {
+      "stars": 12969,
+      "repository": "https://github.com/web-infra-dev/rspack",
+      "starsSourceUrl": "https://api.github.com/repos/web-infra-dev/rspack",
+      "observedAt": "2026-11-07T10:00:42.184Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@rspack/core",
+        "downloads": 11635261,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40rspack%2Fcore",
+        "observedAt": "2026-11-07T09:49:47.799Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "rollup": {
+      "stars": 26301,
+      "repository": "https://github.com/rollup/rollup",
+      "starsSourceUrl": "https://api.github.com/repos/rollup/rollup",
+      "observedAt": "2026-11-07T10:00:42.321Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "rollup",
+        "downloads": 161838740,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/rollup",
+        "observedAt": "2026-11-07T09:49:49.781Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "rolldown": {
+      "stars": 14002,
+      "repository": "https://github.com/rolldown/rolldown",
+      "starsSourceUrl": "https://api.github.com/repos/rolldown/rolldown",
+      "observedAt": "2026-11-07T10:00:42.058Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "rolldown",
+        "downloads": 160205525,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/rolldown",
+        "observedAt": "2026-11-07T09:49:51.975Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "rsbuild": {
+      "stars": 3416,
+      "repository": "https://github.com/web-infra-dev/rsbuild",
+      "starsSourceUrl": "https://api.github.com/repos/web-infra-dev/rsbuild",
+      "observedAt": "2026-11-07T10:00:43.344Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@rsbuild/core",
+        "downloads": 2371510,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40rsbuild%2Fcore",
+        "observedAt": "2026-11-07T09:49:54.178Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "eslint": {
+      "stars": 27603,
+      "repository": "https://github.com/eslint/eslint",
+      "starsSourceUrl": "https://api.github.com/repos/eslint/eslint",
+      "observedAt": "2026-11-07T10:00:43.475Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "eslint",
+        "downloads": 205680639,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/eslint",
+        "observedAt": "2026-11-07T09:49:56.374Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "biome": {
+      "stars": 26054,
+      "repository": "https://github.com/biomejs/biome",
+      "starsSourceUrl": "https://api.github.com/repos/biomejs/biome",
+      "observedAt": "2026-11-07T10:00:43.487Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@biomejs/biome",
+        "downloads": 26211352,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40biomejs%2Fbiome",
+        "observedAt": "2026-11-07T09:49:58.593Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "prettier": {
+      "stars": 52407,
+      "repository": "https://github.com/prettier/prettier",
+      "starsSourceUrl": "https://api.github.com/repos/prettier/prettier",
+      "observedAt": "2026-11-07T10:00:43.535Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "prettier",
+        "downloads": 182948713,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/prettier",
+        "observedAt": "2026-11-07T09:50:01.008Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "vitest": {
+      "stars": 17342,
+      "repository": "https://github.com/vitest-dev/vitest",
+      "starsSourceUrl": "https://api.github.com/repos/vitest-dev/vitest",
+      "observedAt": "2026-11-07T10:00:43.345Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "vitest",
+        "downloads": 179214189,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/vitest",
+        "observedAt": "2026-11-07T09:50:02.984Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "playwright": {
+      "stars": 99499,
+      "repository": "https://github.com/microsoft/playwright",
+      "starsSourceUrl": "https://api.github.com/repos/microsoft/playwright",
+      "observedAt": "2026-11-07T10:00:44.287Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@playwright/test",
+        "downloads": 112522342,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40playwright%2Ftest",
+        "observedAt": "2026-11-07T09:50:05.183Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "testing-library": {
+      "stars": 3340,
+      "repository": "https://github.com/testing-library/dom-testing-library",
+      "starsSourceUrl": "https://api.github.com/repos/testing-library/dom-testing-library",
+      "observedAt": "2026-11-07T10:00:44.416Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@testing-library/dom",
+        "downloads": 114346902,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40testing-library%2Fdom",
+        "observedAt": "2026-11-07T09:50:07.381Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "msw": {
+      "stars": 18336,
+      "repository": "https://github.com/mswjs/msw",
+      "starsSourceUrl": "https://api.github.com/repos/mswjs/msw",
+      "observedAt": "2026-11-07T10:00:44.579Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "msw",
+        "downloads": 33258521,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/msw",
+        "observedAt": "2026-11-07T09:50:09.591Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "storybook": {
+      "stars": 91476,
+      "repository": "https://github.com/storybookjs/storybook",
+      "starsSourceUrl": "https://api.github.com/repos/storybookjs/storybook",
+      "observedAt": "2026-11-07T10:00:44.654Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "storybook",
+        "downloads": 34951969,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/storybook",
+        "observedAt": "2026-11-07T09:50:11.785Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "lighthouse": {
+      "stars": 31023,
+      "repository": "https://github.com/GoogleChrome/lighthouse",
+      "starsSourceUrl": "https://api.github.com/repos/GoogleChrome/lighthouse",
+      "observedAt": "2026-11-07T10:00:45.168Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "lighthouse",
+        "downloads": 7285288,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/lighthouse",
+        "observedAt": "2026-11-07T09:50:14.220Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "web-vitals": {
+      "stars": 8669,
+      "repository": "https://github.com/GoogleChrome/web-vitals",
+      "starsSourceUrl": "https://api.github.com/repos/GoogleChrome/web-vitals",
+      "observedAt": "2026-11-07T10:00:45.678Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "web-vitals",
+        "downloads": 79064945,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/web-vitals",
+        "observedAt": "2026-11-07T09:50:16.247Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "axe": {
+      "stars": 7773,
+      "repository": "https://github.com/dequelabs/axe-core",
+      "starsSourceUrl": "https://api.github.com/repos/dequelabs/axe-core",
+      "observedAt": "2026-11-07T10:00:45.679Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "axe-core",
+        "downloads": 110864427,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/axe-core",
+        "observedAt": "2026-11-07T09:50:18.403Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "github-actions": {
+      "stars": 6381,
+      "repository": "https://github.com/actions/runner",
+      "starsSourceUrl": "https://api.github.com/repos/actions/runner",
+      "observedAt": "2026-11-07T10:00:45.764Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": null,
+      "usageNote": "该实现没有可比的官方 npm 采用量；用户数与下载量未知，不记为零。"
+    },
+    "docker": {
+      "stars": 72355,
+      "repository": "https://github.com/moby/moby",
+      "starsSourceUrl": "https://api.github.com/repos/moby/moby",
+      "observedAt": "2026-11-07T10:00:46.233Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": null,
+      "usageNote": "该实现没有可比的官方 npm 采用量；用户数与下载量未知，不记为零。"
+    },
+    "sentry": {
+      "stars": 8771,
+      "repository": "https://github.com/getsentry/sentry-javascript",
+      "starsSourceUrl": "https://api.github.com/repos/getsentry/sentry-javascript",
+      "observedAt": "2026-11-07T10:00:46.626Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@sentry/browser",
+        "downloads": 52463054,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40sentry%2Fbrowser",
+        "observedAt": "2026-11-07T09:50:20.678Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "opentelemetry": {
+      "stars": 3516,
+      "repository": "https://github.com/open-telemetry/opentelemetry-js",
+      "starsSourceUrl": "https://api.github.com/repos/open-telemetry/opentelemetry-js",
+      "observedAt": "2026-11-07T10:00:47.436Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@opentelemetry/api",
+        "downloads": 140360574,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40opentelemetry%2Fapi",
+        "observedAt": "2026-11-07T09:50:22.862Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "renovate": {
+      "stars": 23034,
+      "repository": "https://github.com/renovatebot/renovate",
+      "starsSourceUrl": "https://api.github.com/repos/renovatebot/renovate",
+      "observedAt": "2026-11-07T10:00:47.641Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "renovate",
+        "downloads": 579140,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/renovate",
+        "observedAt": "2026-11-07T09:50:25.087Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "changesets": {
+      "stars": 12559,
+      "repository": "https://github.com/changesets/changesets",
+      "starsSourceUrl": "https://api.github.com/repos/changesets/changesets",
+      "observedAt": "2026-11-07T10:00:47.422Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@changesets/cli",
+        "downloads": 9018488,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40changesets%2Fcli",
+        "observedAt": "2026-11-07T09:50:27.266Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "turborepo": {
+      "stars": 31309,
+      "repository": "https://github.com/vercel/turborepo",
+      "starsSourceUrl": "https://api.github.com/repos/vercel/turborepo",
+      "observedAt": "2026-11-07T10:00:47.641Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "turbo",
+        "downloads": 44408990,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/turbo",
+        "observedAt": "2026-11-07T09:50:29.514Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "nx": {
+      "stars": 29454,
+      "repository": "https://github.com/nrwl/nx",
+      "starsSourceUrl": "https://api.github.com/repos/nrwl/nx",
+      "observedAt": "2026-11-07T10:00:48.090Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "nx",
+        "downloads": 15069164,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/nx",
+        "observedAt": "2026-11-07T09:50:31.694Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "yjs": {
+      "stars": 23030,
+      "repository": "https://github.com/yjs/yjs",
+      "starsSourceUrl": "https://api.github.com/repos/yjs/yjs",
+      "observedAt": "2026-11-07T10:00:48.504Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "yjs",
+        "downloads": 15655844,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/yjs",
+        "observedAt": "2026-11-07T09:50:34.162Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "automerge": {
+      "stars": 6721,
+      "repository": "https://github.com/automerge/automerge",
+      "starsSourceUrl": "https://api.github.com/repos/automerge/automerge",
+      "observedAt": "2026-11-07T10:00:48.558Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@automerge/automerge",
+        "downloads": 109579,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40automerge%2Fautomerge",
+        "observedAt": "2026-11-07T09:50:36.232Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "excalidraw": {
+      "stars": 135264,
+      "repository": "https://github.com/excalidraw/excalidraw",
+      "starsSourceUrl": "https://api.github.com/repos/excalidraw/excalidraw",
+      "observedAt": "2026-11-07T10:00:49.200Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@excalidraw/excalidraw",
+        "downloads": 1338620,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40excalidraw%2Fexcalidraw",
+        "observedAt": "2026-11-07T09:50:38.320Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "matrix-js-sdk": {
+      "stars": 2195,
+      "repository": "https://github.com/matrix-org/matrix-js-sdk",
+      "starsSourceUrl": "https://api.github.com/repos/matrix-org/matrix-js-sdk",
+      "observedAt": "2026-11-07T10:00:48.721Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "matrix-js-sdk",
+        "downloads": 478682,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/matrix-js-sdk",
+        "observedAt": "2026-11-07T09:50:40.913Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "socket-io": {
+      "stars": 63237,
+      "repository": "https://github.com/socketio/socket.io",
+      "starsSourceUrl": "https://api.github.com/repos/socketio/socket.io",
+      "observedAt": "2026-11-07T10:00:49.508Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "socket.io-client",
+        "downloads": 21364099,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/socket.io-client",
+        "observedAt": "2026-11-07T09:50:42.945Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "livekit": {
+      "stars": 22075,
+      "repository": "https://github.com/livekit/livekit",
+      "starsSourceUrl": "https://api.github.com/repos/livekit/livekit",
+      "observedAt": "2026-11-07T10:00:49.514Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "livekit-client",
+        "downloads": 7571597,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/livekit-client",
+        "observedAt": "2026-11-07T09:50:44.928Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "mediasoup": {
+      "stars": 7416,
+      "repository": "https://github.com/versatica/mediasoup",
+      "starsSourceUrl": "https://api.github.com/repos/versatica/mediasoup",
+      "observedAt": "2026-11-07T10:00:49.722Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "mediasoup-client",
+        "downloads": 156976,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/mediasoup-client",
+        "observedAt": "2026-11-07T09:50:47.115Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "videojs": {
+      "stars": 40108,
+      "repository": "https://github.com/videojs/video.js",
+      "starsSourceUrl": "https://api.github.com/repos/videojs/video.js",
+      "observedAt": "2026-11-07T10:00:49.811Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "video.js",
+        "downloads": 1581197,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/video.js",
+        "observedAt": "2026-11-07T09:50:49.295Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "shaka-player": {
+      "stars": 8271,
+      "repository": "https://github.com/shaka-project/shaka-player",
+      "starsSourceUrl": "https://api.github.com/repos/shaka-project/shaka-player",
+      "observedAt": "2026-11-07T10:00:50.564Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "shaka-player",
+        "downloads": 497921,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/shaka-player",
+        "observedAt": "2026-11-07T09:50:51.468Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "tiptap": {
+      "stars": 38984,
+      "repository": "https://github.com/ueberdosis/tiptap",
+      "starsSourceUrl": "https://api.github.com/repos/ueberdosis/tiptap",
+      "observedAt": "2026-11-07T10:00:50.703Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@tiptap/core",
+        "downloads": 35564693,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40tiptap%2Fcore",
+        "observedAt": "2026-11-07T09:50:53.704Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "lexical": {
+      "stars": 24000,
+      "repository": "https://github.com/meta/lexical",
+      "starsSourceUrl": "https://api.github.com/repos/meta/lexical",
+      "observedAt": "2026-11-07T10:00:51.256Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "lexical",
+        "downloads": 8838035,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/lexical",
+        "observedAt": "2026-11-07T09:50:55.944Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "codemirror": {
+      "stars": 178,
+      "repository": "https://github.com/codemirror/view",
+      "starsSourceUrl": "https://api.github.com/repos/codemirror/view",
+      "observedAt": "2026-11-07T10:00:51.280Z",
+      "archived": true,
+      "activeUpstream": "https://code.haverbeke.berlin/codemirror/view",
+      "npm": {
+        "package": "@codemirror/view",
+        "downloads": 23342612,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40codemirror%2Fview",
+        "observedAt": "2026-11-07T09:50:59.361Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "monaco": {
+      "stars": 46958,
+      "repository": "https://github.com/microsoft/monaco-editor",
+      "starsSourceUrl": "https://api.github.com/repos/microsoft/monaco-editor",
+      "observedAt": "2026-11-07T10:00:51.120Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "monaco-editor",
+        "downloads": 13493830,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/monaco-editor",
+        "observedAt": "2026-11-07T09:51:00.358Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "react-flow": {
+      "stars": 38927,
+      "repository": "https://github.com/xyflow/xyflow",
+      "starsSourceUrl": "https://api.github.com/repos/xyflow/xyflow",
+      "observedAt": "2026-11-07T10:00:52.427Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@xyflow/react",
+        "downloads": 20552673,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40xyflow%2Freact",
+        "observedAt": "2026-11-07T09:51:02.537Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "antv-x6": {
+      "stars": 6752,
+      "repository": "https://github.com/antvis/X6",
+      "starsSourceUrl": "https://api.github.com/repos/antvis/X6",
+      "observedAt": "2026-11-07T10:00:51.659Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@antv/x6",
+        "downloads": 81749,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40antv%2Fx6",
+        "observedAt": "2026-11-07T09:51:05.040Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "echarts": {
+      "stars": 67691,
+      "repository": "https://github.com/apache/echarts",
+      "starsSourceUrl": "https://api.github.com/repos/apache/echarts",
+      "observedAt": "2026-11-07T10:00:52.088Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "echarts",
+        "downloads": 10065850,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/echarts",
+        "observedAt": "2026-11-07T09:51:07.056Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "d3": {
+      "stars": 113876,
+      "repository": "https://github.com/d3/d3",
+      "starsSourceUrl": "https://api.github.com/repos/d3/d3",
+      "observedAt": "2026-11-07T10:00:52.157Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "d3",
+        "downloads": 32512582,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/d3",
+        "observedAt": "2026-11-07T09:51:09.644Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "maplibre": {
+      "stars": 12037,
+      "repository": "https://github.com/maplibre/maplibre-gl-js",
+      "starsSourceUrl": "https://api.github.com/repos/maplibre/maplibre-gl-js",
+      "observedAt": "2026-11-07T10:00:52.671Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "maplibre-gl",
+        "downloads": 9965600,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/maplibre-gl",
+        "observedAt": "2026-11-07T09:51:11.341Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "openlayers": {
+      "stars": 12647,
+      "repository": "https://github.com/openlayers/openlayers",
+      "starsSourceUrl": "https://api.github.com/repos/openlayers/openlayers",
+      "observedAt": "2026-11-07T10:00:52.887Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "ol",
+        "downloads": 1130420,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/ol",
+        "observedAt": "2026-11-07T09:51:13.836Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "assistant-ui": {
+      "stars": 12987,
+      "repository": "https://github.com/assistant-ui/assistant-ui",
+      "starsSourceUrl": "https://api.github.com/repos/assistant-ui/assistant-ui",
+      "observedAt": "2026-11-07T10:00:53.165Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@assistant-ui/react",
+        "downloads": 3118764,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40assistant-ui%2Freact",
+        "observedAt": "2026-11-07T09:51:15.749Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "ai-sdk": {
+      "stars": 27792,
+      "repository": "https://github.com/vercel/ai",
+      "starsSourceUrl": "https://api.github.com/repos/vercel/ai",
+      "observedAt": "2026-11-07T10:00:54.068Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "ai",
+        "downloads": 45262880,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/ai",
+        "observedAt": "2026-11-07T09:51:18.140Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "tanstack-form": {
+      "stars": 6767,
+      "repository": "https://github.com/TanStack/form",
+      "starsSourceUrl": "https://api.github.com/repos/TanStack/form",
+      "observedAt": "2026-11-07T10:00:53.511Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@tanstack/react-form",
+        "downloads": 6569175,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40tanstack%2Freact-form",
+        "observedAt": "2026-11-07T09:51:20.739Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "uppy": {
+      "stars": 31061,
+      "repository": "https://github.com/transloadit/uppy",
+      "starsSourceUrl": "https://api.github.com/repos/transloadit/uppy",
+      "observedAt": "2026-11-07T10:00:54.131Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@uppy/core",
+        "downloads": 2180035,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40uppy%2Fcore",
+        "observedAt": "2026-11-07T09:51:22.309Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "filepond": {
+      "stars": 16393,
+      "repository": "https://github.com/pqina/filepond",
+      "starsSourceUrl": "https://api.github.com/repos/pqina/filepond",
+      "observedAt": "2026-11-07T10:00:54.012Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "filepond",
+        "downloads": 497034,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/filepond",
+        "observedAt": "2026-11-07T09:51:24.573Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "motion": {
+      "stars": 34978,
+      "repository": "https://github.com/motiondivision/motion",
+      "starsSourceUrl": "https://api.github.com/repos/motiondivision/motion",
+      "observedAt": "2026-11-07T10:00:54.823Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "motion",
+        "downloads": 34084865,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/motion",
+        "observedAt": "2026-11-07T09:51:27.102Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "animejs": {
+      "stars": 74380,
+      "repository": "https://github.com/juliangarnier/anime",
+      "starsSourceUrl": "https://api.github.com/repos/juliangarnier/anime",
+      "observedAt": "2026-11-07T10:00:55.261Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "animejs",
+        "downloads": 1065011,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/animejs",
+        "observedAt": "2026-11-07T09:51:28.960Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "phaser": {
+      "stars": 40656,
+      "repository": "https://github.com/phaserjs/phaser",
+      "starsSourceUrl": "https://api.github.com/repos/phaserjs/phaser",
+      "observedAt": "2026-11-07T10:00:55.406Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "phaser",
+        "downloads": 809820,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/phaser",
+        "observedAt": "2026-11-07T09:51:31.670Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "pixijs": {
+      "stars": 48644,
+      "repository": "https://github.com/pixijs/pixijs",
+      "starsSourceUrl": "https://api.github.com/repos/pixijs/pixijs",
+      "observedAt": "2026-11-07T10:00:55.071Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "pixi.js",
+        "downloads": 1816815,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/pixi.js",
+        "observedAt": "2026-11-07T09:51:33.341Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "threejs": {
+      "stars": 117764,
+      "repository": "https://github.com/mrdoob/three.js",
+      "starsSourceUrl": "https://api.github.com/repos/mrdoob/three.js",
+      "observedAt": "2026-11-07T10:00:55.251Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "three",
+        "downloads": 34214077,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/three",
+        "observedAt": "2026-11-07T09:51:35.559Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "react-three-fiber": {
+      "stars": 33552,
+      "repository": "https://github.com/pmndrs/react-three-fiber",
+      "starsSourceUrl": "https://api.github.com/repos/pmndrs/react-three-fiber",
+      "observedAt": "2026-11-07T10:00:56.050Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@react-three/fiber",
+        "downloads": 9234931,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40react-three%2Ffiber",
+        "observedAt": "2026-11-07T09:51:37.973Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "babylonjs": {
+      "stars": 26302,
+      "repository": "https://github.com/BabylonJS/Babylon.js",
+      "starsSourceUrl": "https://api.github.com/repos/BabylonJS/Babylon.js",
+      "observedAt": "2026-11-07T10:00:56.477Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@babylonjs/core",
+        "downloads": 380743,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40babylonjs%2Fcore",
+        "observedAt": "2026-11-07T09:51:39.982Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "konva": {
+      "stars": 14923,
+      "repository": "https://github.com/konvajs/konva",
+      "starsSourceUrl": "https://api.github.com/repos/konvajs/konva",
+      "observedAt": "2026-11-07T10:00:56.765Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "konva",
+        "downloads": 3965584,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/konva",
+        "observedAt": "2026-11-07T09:51:42.131Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "fabricjs": {
+      "stars": 31548,
+      "repository": "https://github.com/fabricjs/fabric.js",
+      "starsSourceUrl": "https://api.github.com/repos/fabricjs/fabric.js",
+      "observedAt": "2026-11-07T10:00:56.331Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "fabric",
+        "downloads": 1333610,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/fabric",
+        "observedAt": "2026-11-07T09:51:44.359Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "expo": {
+      "stars": 53384,
+      "repository": "https://github.com/expo/expo",
+      "starsSourceUrl": "https://api.github.com/repos/expo/expo",
+      "observedAt": "2026-11-07T10:00:56.623Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "expo",
+        "downloads": 17324269,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/expo",
+        "observedAt": "2026-11-07T09:51:46.815Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "react-native": {
+      "stars": 126872,
+      "repository": "https://github.com/react/react-native",
+      "starsSourceUrl": "https://api.github.com/repos/react/react-native",
+      "observedAt": "2026-11-07T10:00:58.606Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "react-native",
+        "downloads": 21594445,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/react-native",
+        "observedAt": "2026-11-07T09:51:48.814Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "capacitor": {
+      "stars": 17045,
+      "repository": "https://github.com/ionic-team/capacitor",
+      "starsSourceUrl": "https://api.github.com/repos/ionic-team/capacitor",
+      "observedAt": "2026-11-07T10:00:58.132Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@capacitor/core",
+        "downloads": 7778054,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40capacitor%2Fcore",
+        "observedAt": "2026-11-07T09:51:51.057Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "tauri": {
+      "stars": 112577,
+      "repository": "https://github.com/tauri-apps/tauri",
+      "starsSourceUrl": "https://api.github.com/repos/tauri-apps/tauri",
+      "observedAt": "2026-11-07T10:00:57.566Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@tauri-apps/api",
+        "downloads": 4370379,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40tauri-apps%2Fapi",
+        "observedAt": "2026-11-07T09:51:53.391Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "electron": {
+      "stars": 123814,
+      "repository": "https://github.com/electron/electron",
+      "starsSourceUrl": "https://api.github.com/repos/electron/electron",
+      "observedAt": "2026-11-07T10:00:57.483Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "electron",
+        "downloads": 12704155,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/electron",
+        "observedAt": "2026-11-07T09:51:55.408Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "workbox": {
+      "stars": 13041,
+      "repository": "https://github.com/GoogleChrome/workbox",
+      "starsSourceUrl": "https://api.github.com/repos/GoogleChrome/workbox",
+      "observedAt": "2026-11-07T10:00:57.819Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "workbox-core",
+        "downloads": 13253502,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/workbox-core",
+        "observedAt": "2026-11-07T09:51:57.855Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "vite-pwa": {
+      "stars": 4308,
+      "repository": "https://github.com/vite-pwa/vite-plugin-pwa",
+      "starsSourceUrl": "https://api.github.com/repos/vite-pwa/vite-plugin-pwa",
+      "observedAt": "2026-11-07T10:00:58.518Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "vite-plugin-pwa",
+        "downloads": 7434614,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/vite-plugin-pwa",
+        "observedAt": "2026-11-07T09:51:59.722Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "wxt": {
+      "stars": 10709,
+      "repository": "https://github.com/wxt-dev/wxt",
+      "starsSourceUrl": "https://api.github.com/repos/wxt-dev/wxt",
+      "observedAt": "2026-11-07T10:00:59.029Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "wxt",
+        "downloads": 1102002,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/wxt",
+        "observedAt": "2026-11-07T09:52:02.193Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "plasmo": {
+      "stars": 13174,
+      "repository": "https://github.com/PlasmoHQ/plasmo",
+      "starsSourceUrl": "https://api.github.com/repos/PlasmoHQ/plasmo",
+      "observedAt": "2026-11-07T10:00:59.034Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "plasmo",
+        "downloads": 363082,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/plasmo",
+        "observedAt": "2026-11-07T09:52:04.147Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "single-spa": {
+      "stars": 13879,
+      "repository": "https://github.com/single-spa/single-spa",
+      "starsSourceUrl": "https://api.github.com/repos/single-spa/single-spa",
+      "observedAt": "2026-11-07T10:00:58.920Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "single-spa",
+        "downloads": 560617,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/single-spa",
+        "observedAt": "2026-11-07T09:52:06.379Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "module-federation": {
+      "stars": 2679,
+      "repository": "https://github.com/module-federation/core",
+      "starsSourceUrl": "https://api.github.com/repos/module-federation/core",
+      "observedAt": "2026-11-07T10:00:59.790Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@module-federation/enhanced",
+        "downloads": 4443221,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40module-federation%2Fenhanced",
+        "observedAt": "2026-11-07T09:52:08.765Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "i18next": {
+      "stars": 8662,
+      "repository": "https://github.com/i18next/i18next",
+      "starsSourceUrl": "https://api.github.com/repos/i18next/i18next",
+      "observedAt": "2026-11-07T10:00:59.645Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "i18next",
+        "downloads": 34807895,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/i18next",
+        "observedAt": "2026-11-07T09:52:10.826Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "formatjs": {
+      "stars": 14753,
+      "repository": "https://github.com/formatjs/formatjs",
+      "starsSourceUrl": "https://api.github.com/repos/formatjs/formatjs",
+      "observedAt": "2026-11-07T10:01:00.487Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "react-intl",
+        "downloads": 4481165,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/react-intl",
+        "observedAt": "2026-11-07T09:52:13.026Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "react-aria": {
+      "stars": 16017,
+      "repository": "https://github.com/adobe/react-spectrum",
+      "starsSourceUrl": "https://api.github.com/repos/adobe/react-spectrum",
+      "observedAt": "2026-11-07T10:01:00.420Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "react-aria",
+        "downloads": 16425869,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/react-aria",
+        "observedAt": "2026-11-07T09:52:15.633Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "radix": {
+      "stars": 19479,
+      "repository": "https://github.com/radix-ui/primitives",
+      "starsSourceUrl": "https://api.github.com/repos/radix-ui/primitives",
+      "observedAt": "2026-11-07T10:01:00.186Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@radix-ui/react-dialog",
+        "downloads": 92189703,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40radix-ui%2Freact-dialog",
+        "observedAt": "2026-11-07T09:52:17.589Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "reka-ui": {
+      "stars": 6937,
+      "repository": "https://github.com/unovue/reka-ui",
+      "starsSourceUrl": "https://api.github.com/repos/unovue/reka-ui",
+      "observedAt": "2026-11-07T10:01:01.453Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "reka-ui",
+        "downloads": 3094381,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/reka-ui",
+        "observedAt": "2026-11-07T09:52:19.552Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    },
+    "nginx": {
+      "stars": 32069,
+      "repository": "https://github.com/nginx/nginx",
+      "starsSourceUrl": "https://api.github.com/repos/nginx/nginx",
+      "observedAt": "2026-11-07T10:01:01.031Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": null,
+      "usageNote": "该实现没有可比的官方 npm 采用量；用户数与下载量未知，不记为零。"
+    },
+    "spectrum-web-components": {
+      "stars": 1576,
+      "repository": "https://github.com/adobe/spectrum-web-components",
+      "starsSourceUrl": "https://api.github.com/repos/adobe/spectrum-web-components",
+      "observedAt": "2026-11-07T10:01:01.614Z",
+      "archived": false,
+      "activeUpstream": null,
+      "npm": {
+        "package": "@spectrum-web-components/button",
+        "downloads": 76136,
+        "start": "2026-10-31",
+        "end": "2026-11-06",
+        "sourceUrl": "https://api.npmjs.org/downloads/point/2026-10-31:2026-11-06/%40spectrum-web-components%2Fbutton",
+        "observedAt": "2026-11-07T09:52:21.933Z"
+      },
+      "usageNote": "代表 npm 包的下载次数，包含 CI、重复与间接安装；不等于真实用户数。Stars 为整个源码仓库的关注数。"
+    }
+  }
+}

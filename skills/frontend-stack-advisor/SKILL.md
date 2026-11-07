@@ -15,9 +15,10 @@ description: 为前端项目按使用场景和硬约束推荐开源技术栈，�
 
 按需查询资源，不必一次读完整目录：
 
-- [场景索引](references/scenarios.md)：31 个方向的首选、替代条件和实现边界。
+- [场景索引](references/scenarios.md)：31 个方向的能力匹配基线、替代条件和实现边界；最终热度排序使用 CLI 或按排序方法重新计算。
 - [技术目录](references/catalog.json)：能力、适用/不适用、源码、许可证、官方资料和整理日期。
 - [决策原则](references/decision-rules.md)：跨阶段职责、运行时与许可检查。
+- [社区指标](references/metrics.json)与[排序方法](references/ranking.md)：GitHub Stars、代表 npm 包的周下载、采集时间和来源。下载次数不是去重用户数。
 - [输出模板](references/decision-template.md)：需要形成可保存的选型记录时读取。
 
 也可用随包提供的无依赖 Node.js CLI（需要 Node.js 22+，路径相对于本 Skill 目录）：
@@ -26,6 +27,7 @@ description: 为前端项目按使用场景和硬约束推荐开源技术栈，�
 node scripts/recommend.mjs --list
 node scripts/recommend.mjs --scenario collaborative-editing --ecosystem React --hosting static
 node scripts/recommend.mjs --scenario game-2d --json
+node scripts/recommend.mjs --scenario code-editor --ranking stars --json
 node scripts/recommend.mjs --search 协同
 ```
 
@@ -34,10 +36,11 @@ CLI 使用与网站相同的规则。它只生成起点，不判断全部业务�
 ## 做出选择
 
 1. 确定核心能力与运行目标，再选库。把 UI、状态、传输、服务端持久化分开，识别组合关系和可替代关系。
-2. 给出该条件下的明确首选，并解释为何优于最相关的替代。不要为每一层都加工具；列明哪些用平台或框架默认能力即可。
+2. 给出该条件下的明确首选，并解释为何优于最相关的替代。先检查职责、生态与运行条件，再在可替代候选中按综合热度排序（Stars 与 npm 周下载量各 50%，采用对数刻度）；用户指定 Stars 或下载量时切换对应排序。跨层互补工具不能因 Stars 多就替换核心方案。不要为每一层都加工具。
 3. 核对每项新依赖的官方文档、源码 LICENSE、维护状态、运行时、框架适配器与版本兼容。整理日期不代表此刻最新；离线时标注未重新核验，不虚构版本或基准测试。
 4. 仅收录开源核心。免费、自定义商业许可或 source-available 不自动等于开源。开源 SDK 不代表其云服务或服务端同样开源；核查实际使用模块。遇到未知许可先排除并说明待确认。
 5. 列出最小验证：用代表性数据或设备验证最重要的不确定性。组件与传输库不自动提供后端权限、持久化、可靠投递或业务一致性。
+6. 报告指标的采集时间、npm 统计周期、代表包和来源；缺失写未知，不当作零，不把 npm 下载量或 Stars 称为真实用户数。多包仓库共享 Stars，代表包不代表全项目采用量。超过 30 天的快照应提示过期；能联网时重查，离线时明确是旧快照。普通归档项目不参与自动首选；有已核验的新维护仓库时，明确标注旧 GitHub 镜像后可保留。
 
 ## 输出可实施的决策
 

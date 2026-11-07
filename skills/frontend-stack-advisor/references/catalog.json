@@ -1138,7 +1138,7 @@
       "tags": ["代码编辑", "SQL", "JSON", "开源"],
       "reviewedAt": "2026-11-07",
       "relatedStages": [],
-      "repository": "https://github.com/codemirror/view",
+      "repository": "https://code.haverbeke.berlin/codemirror/view",
       "license": "MIT",
       "licenseUrl": "https://code.haverbeke.berlin/codemirror/view/src/branch/main/LICENSE"
     },

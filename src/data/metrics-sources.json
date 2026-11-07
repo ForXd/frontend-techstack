@@ -1,0 +1,307 @@
+{
+  "typescript": {
+    "npmPackage": "typescript"
+  },
+  "pnpm": {
+    "npmPackage": "pnpm"
+  },
+  "nodejs": {
+    "npmPackage": null
+  },
+  "react": {
+    "npmPackage": "react"
+  },
+  "vue": {
+    "npmPackage": "vue"
+  },
+  "angular": {
+    "npmPackage": "@angular/core"
+  },
+  "svelte": {
+    "npmPackage": "svelte"
+  },
+  "nextjs": {
+    "npmPackage": "next"
+  },
+  "nuxt": {
+    "npmPackage": "nuxt"
+  },
+  "astro": {
+    "npmPackage": "astro"
+  },
+  "sveltekit": {
+    "npmPackage": "@sveltejs/kit"
+  },
+  "css-modules": {
+    "npmPackage": "postcss-modules"
+  },
+  "tailwind": {
+    "npmPackage": "tailwindcss"
+  },
+  "shadcn": {
+    "npmPackage": "shadcn"
+  },
+  "antd": {
+    "npmPackage": "antd"
+  },
+  "element-plus": {
+    "npmPackage": "element-plus"
+  },
+  "tanstack-query": {
+    "npmPackage": "@tanstack/react-query"
+  },
+  "zustand": {
+    "npmPackage": "zustand"
+  },
+  "redux": {
+    "npmPackage": "@reduxjs/toolkit"
+  },
+  "pinia": {
+    "npmPackage": "pinia"
+  },
+  "zod": {
+    "npmPackage": "zod"
+  },
+  "react-hook-form": {
+    "npmPackage": "react-hook-form"
+  },
+  "babel": {
+    "npmPackage": "@babel/core"
+  },
+  "swc": {
+    "npmPackage": "@swc/core"
+  },
+  "esbuild": {
+    "npmPackage": "esbuild"
+  },
+  "vite": {
+    "npmPackage": "vite"
+  },
+  "webpack": {
+    "npmPackage": "webpack"
+  },
+  "rspack": {
+    "npmPackage": "@rspack/core"
+  },
+  "rollup": {
+    "npmPackage": "rollup"
+  },
+  "rolldown": {
+    "npmPackage": "rolldown"
+  },
+  "rsbuild": {
+    "npmPackage": "@rsbuild/core"
+  },
+  "eslint": {
+    "npmPackage": "eslint"
+  },
+  "biome": {
+    "npmPackage": "@biomejs/biome"
+  },
+  "prettier": {
+    "npmPackage": "prettier"
+  },
+  "vitest": {
+    "npmPackage": "vitest"
+  },
+  "playwright": {
+    "npmPackage": "@playwright/test"
+  },
+  "testing-library": {
+    "npmPackage": "@testing-library/dom"
+  },
+  "msw": {
+    "npmPackage": "msw"
+  },
+  "storybook": {
+    "npmPackage": "storybook"
+  },
+  "lighthouse": {
+    "npmPackage": "lighthouse"
+  },
+  "web-vitals": {
+    "npmPackage": "web-vitals"
+  },
+  "axe": {
+    "npmPackage": "axe-core"
+  },
+  "github-actions": {
+    "npmPackage": null
+  },
+  "docker": {
+    "npmPackage": null
+  },
+  "sentry": {
+    "npmPackage": "@sentry/browser"
+  },
+  "opentelemetry": {
+    "npmPackage": "@opentelemetry/api"
+  },
+  "renovate": {
+    "npmPackage": "renovate"
+  },
+  "changesets": {
+    "npmPackage": "@changesets/cli"
+  },
+  "turborepo": {
+    "npmPackage": "turbo"
+  },
+  "nx": {
+    "npmPackage": "nx"
+  },
+  "yjs": {
+    "npmPackage": "yjs"
+  },
+  "automerge": {
+    "npmPackage": "@automerge/automerge"
+  },
+  "excalidraw": {
+    "npmPackage": "@excalidraw/excalidraw"
+  },
+  "matrix-js-sdk": {
+    "npmPackage": "matrix-js-sdk"
+  },
+  "socket-io": {
+    "npmPackage": "socket.io-client"
+  },
+  "livekit": {
+    "npmPackage": "livekit-client"
+  },
+  "mediasoup": {
+    "npmPackage": "mediasoup-client"
+  },
+  "videojs": {
+    "npmPackage": "video.js"
+  },
+  "shaka-player": {
+    "npmPackage": "shaka-player"
+  },
+  "tiptap": {
+    "npmPackage": "@tiptap/core"
+  },
+  "lexical": {
+    "npmPackage": "lexical"
+  },
+  "codemirror": {
+    "npmPackage": "@codemirror/view",
+    "githubRepository": "https://github.com/codemirror/view",
+    "activeUpstream": "https://code.haverbeke.berlin/codemirror/view"
+  },
+  "monaco": {
+    "npmPackage": "monaco-editor"
+  },
+  "react-flow": {
+    "npmPackage": "@xyflow/react"
+  },
+  "antv-x6": {
+    "npmPackage": "@antv/x6"
+  },
+  "echarts": {
+    "npmPackage": "echarts"
+  },
+  "d3": {
+    "npmPackage": "d3"
+  },
+  "maplibre": {
+    "npmPackage": "maplibre-gl"
+  },
+  "openlayers": {
+    "npmPackage": "ol"
+  },
+  "assistant-ui": {
+    "npmPackage": "@assistant-ui/react"
+  },
+  "ai-sdk": {
+    "npmPackage": "ai"
+  },
+  "tanstack-form": {
+    "npmPackage": "@tanstack/react-form"
+  },
+  "uppy": {
+    "npmPackage": "@uppy/core"
+  },
+  "filepond": {
+    "npmPackage": "filepond"
+  },
+  "motion": {
+    "npmPackage": "motion"
+  },
+  "animejs": {
+    "npmPackage": "animejs"
+  },
+  "phaser": {
+    "npmPackage": "phaser"
+  },
+  "pixijs": {
+    "npmPackage": "pixi.js"
+  },
+  "threejs": {
+    "npmPackage": "three"
+  },
+  "react-three-fiber": {
+    "npmPackage": "@react-three/fiber"
+  },
+  "babylonjs": {
+    "npmPackage": "@babylonjs/core"
+  },
+  "konva": {
+    "npmPackage": "konva"
+  },
+  "fabricjs": {
+    "npmPackage": "fabric"
+  },
+  "expo": {
+    "npmPackage": "expo"
+  },
+  "react-native": {
+    "npmPackage": "react-native"
+  },
+  "capacitor": {
+    "npmPackage": "@capacitor/core"
+  },
+  "tauri": {
+    "npmPackage": "@tauri-apps/api"
+  },
+  "electron": {
+    "npmPackage": "electron"
+  },
+  "workbox": {
+    "npmPackage": "workbox-core"
+  },
+  "vite-pwa": {
+    "npmPackage": "vite-plugin-pwa"
+  },
+  "wxt": {
+    "npmPackage": "wxt"
+  },
+  "plasmo": {
+    "npmPackage": "plasmo"
+  },
+  "single-spa": {
+    "npmPackage": "single-spa"
+  },
+  "module-federation": {
+    "npmPackage": "@module-federation/enhanced"
+  },
+  "i18next": {
+    "npmPackage": "i18next"
+  },
+  "formatjs": {
+    "npmPackage": "react-intl"
+  },
+  "react-aria": {
+    "npmPackage": "react-aria"
+  },
+  "radix": {
+    "npmPackage": "@radix-ui/react-dialog"
+  },
+  "reka-ui": {
+    "npmPackage": "reka-ui"
+  },
+  "nginx": {
+    "npmPackage": null
+  },
+  "spectrum-web-components": {
+    "npmPackage": "@spectrum-web-components/button"
+  }
+}

@@ -20,7 +20,7 @@
 | 动效与媒体 | UI 微动效、滚动叙事、2D 游戏、3D 展示、音视频播放 |
 | 跨端与架构 | 移动跨端、桌面应用、PWA 离线、浏览器扩展、微前端、国际化、无障碍组件 |
 
-每个方向有明确的场景首选、推荐组合、选择理由、替代条件和实现边界。生态与托管约束会调整组合。推荐不等于通用“最佳”；实时系统的后端职责、原生分发流程和框架兼容需要具体评估。
+每个方向有明确的场景首选、推荐组合、选择理由、替代条件和实现边界。目录与场景支持综合热度、GitHub Stars、npm 周下载量排序；卡片、详情、比较与 Markdown 导出展示指标及来源。生态与托管约束会调整组合。推荐不等于通用“最佳”；实时系统的后端职责、原生分发流程和框架兼容需要具体评估。
 
 ## 只收录开源实现
 
@@ -29,6 +29,14 @@
 许可证字段描述核心实现；依赖、插件、字体、地图或媒体数据应按实际发行版本复核。特别注意 copyleft 义务，以及 SDK 与服务端的独立许可。目录最近整理：**2026-11-07**。
 
 本站按项目要求发布在 GitHub Pages。Pages 是本站的基础设施，并不因此被收录为开源技术。所有搜索和规则推荐在浏览器本地执行，无登录、后端或模型 API key。
+
+## 社区指标与排序
+
+已接入 101 个仓库的 GitHub Stars 与 97 个代表 npm 包的周下载量。npm 下载量是采用规模参考，**不是真实用户数**；源码复制型组件、SDK 与服务端项目的分发方式不同，不能跨职责推断用户规模。
+
+默认综合热度对两项指标各给 50% 权重并使用对数刻度；缺失值不记零。场景先检查职责与生态兼容，再在可比较候选中选首选。数据保留采集时间、统一统计周期和官方来源；过期快照会提示。详见 [排序方法](docs/ranking.md)。
+
+运行 `npm run update:metrics` 可更新官方指标并同步 skill，需已登录 GitHub CLI。API 失败会保留旧快照；没有设置定时刷新任务。
 
 ## Agent Skill
 
@@ -51,11 +59,12 @@ cp -R frontend-techstack/skills/frontend-stack-advisor ~/.codex/skills/
 ```sh
 node skills/frontend-stack-advisor/scripts/recommend.mjs --list
 node skills/frontend-stack-advisor/scripts/recommend.mjs --scenario game-2d --json
+node skills/frontend-stack-advisor/scripts/recommend.mjs --scenario code-editor --ranking stars
 node skills/frontend-stack-advisor/scripts/recommend.mjs --scenario collaborative-editing --ecosystem Vue --hosting static
 node skills/frontend-stack-advisor/scripts/recommend.mjs --search 协同
 ```
 
-机器可读资源：[catalog.json](https://forxd.github.io/frontend-techstack/catalog.json)、[scenarios.json](https://forxd.github.io/frontend-techstack/scenarios.json)、[llms.txt](https://forxd.github.io/frontend-techstack/llms.txt)。网站和 CLI 使用同一套规则，不调用大模型，结果可复现。Agent 需要结合项目额外约束判断，不能把规则结果当成完整架构审批。
+机器可读资源：[catalog.json](https://forxd.github.io/frontend-techstack/catalog.json)、[scenarios.json](https://forxd.github.io/frontend-techstack/scenarios.json)、[metrics.json](https://forxd.github.io/frontend-techstack/metrics.json)、[llms.txt](https://forxd.github.io/frontend-techstack/llms.txt)。网站和 CLI 使用同一套规则，不调用大模型，结果可复现。Agent 需要结合项目额外约束判断，不能把规则结果当成完整架构审批。
 
 ## 本地开发
 
@@ -81,6 +90,7 @@ npm run preview
 
 - `src/data/catalog.json`：唯一技术目录源。
 - `src/data/scenarios.json`：唯一场景配方源。
+- `src/data/metrics.json` 与 `metrics-sources.json`：指标快照及代表 npm 包映射。
 - `src/engine.mjs`：网站与 portable CLI 共用的检索和选型逻辑。
 - `skills/frontend-stack-advisor/SKILL.md`：Agent 决策流程。
 - `npm run sync`：生成 skill 的目录、场景索引和规则副本，同时生成 public JSON、llms.txt 和 ZIP。

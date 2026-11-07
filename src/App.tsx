@@ -25,10 +25,181 @@ import {
   LayoutDashboard,
   Store,
   CheckCheck,
+  Star,
+  TrendingUp,
 } from "lucide-react";
 import catalog from "./data/catalog.json";
 import scenarios from "./data/scenarios.json";
-import { filterCatalog, recommend, recommendationMarkdown } from "./engine.mjs";
+import metricData from "./data/metrics.json";
+import {
+  filterCatalog,
+  recommendRanked,
+  recommendationMarkdown,
+  sortTechnologies,
+  popularityScore,
+  rankingModes,
+} from "./engine.mjs";
+
+type Metric = {
+  stars: number;
+  observedAt: string;
+  starsSourceUrl: string;
+  archived: boolean;
+  activeUpstream: string | null;
+  usageNote: string;
+  npm: null | {
+    package: string;
+    downloads: number;
+    start: string;
+    end: string;
+    sourceUrl: string;
+  };
+};
+const metrics = metricData as {
+  updatedAt: string;
+  period: { start: string; end: string };
+  entries: Record<string, Metric>;
+};
+const number = (n: number | null | undefined) =>
+  n == null
+    ? "未提供"
+    : new Intl.NumberFormat("zh-CN", {
+        notation: "compact",
+        maximumFractionDigits: 1,
+      }).format(n);
+const metricDate = new Date(metrics.updatedAt).toLocaleDateString("zh-CN", {
+  timeZone: "Asia/Shanghai",
+});
+const staleMetrics = Date.now() - Date.parse(metrics.updatedAt) > 30 * 86400000;
+function Metrics({ id, full = false }: { id: string; full?: boolean }) {
+  const m = metrics.entries[id];
+  if (!m) return <p className="fine-print">社区数据暂缺</p>;
+  return (
+    <div className={`metrics ${full ? "metrics-full" : ""}`}>
+      <a
+        href={m.starsSourceUrl}
+        target="_blank"
+        rel="noreferrer"
+        title={`${m.stars.toLocaleString()} GitHub Stars；仓库级统计`}
+      >
+        <Star size={14} />
+        <strong>{full ? m.stars.toLocaleString() : number(m.stars)}</strong>
+        <span>Stars</span>
+      </a>
+      {m.npm ? (
+        <a
+          href={m.npm.sourceUrl}
+          target="_blank"
+          rel="noreferrer"
+          title={`${m.npm.package} · ${m.npm.downloads.toLocaleString()} 次 · ${m.npm.start} — ${m.npm.end}`}
+        >
+          <Download size={14} />
+          <strong>
+            {full ? m.npm.downloads.toLocaleString() : number(m.npm.downloads)}
+          </strong>
+          <span>下载/周</span>
+        </a>
+      ) : (
+        <span>npm 下载量未提供</span>
+      )}
+      {m.archived && (
+        <span className="archived-label">
+          {m.activeUpstream ? "GitHub 镜像已归档" : "仓库已归档"}
+        </span>
+      )}
+      {full && (
+        <p>
+          {m.usageNote}
+          {m.activeUpstream && (
+            <>
+              {" "}
+              项目已迁移至{" "}
+              <a href={m.activeUpstream} target="_blank" rel="noreferrer">
+                新源码仓库
+              </a>
+              ，Stars 为旧 GitHub
+              镜像的历史关注数，不能反映迁移后的完整社区规模。
+            </>
+          )}
+          {m.npm && (
+            <>
+              {" "}
+              代表包：<code>{m.npm.package}</code>；{m.npm.start} 至 {m.npm.end}
+              。
+            </>
+          )}{" "}
+          采集：
+          {new Date(m.observedAt).toLocaleString("zh-CN", {
+            timeZone: "Asia/Shanghai",
+          })}
+          （北京时间）。
+        </p>
+      )}
+    </div>
+  );
+}
+function RankingControl({
+  value,
+  onChange,
+  label,
+}: {
+  value: string;
+  onChange: (v: string) => void;
+  label: string;
+}) {
+  return (
+    <div className="ranking-control">
+      <label>
+        <TrendingUp size={15} />
+        {label}
+        <select value={value} onChange={(e) => onChange(e.target.value)}>
+          {Object.entries(rankingModes).map(([key, name]) => (
+            <option key={key} value={key}>
+              {name}
+            </option>
+          ))}
+        </select>
+      </label>
+      <span>
+        数据快照 {metricDate}
+        {staleMetrics ? " · 超过 30 天未更新" : ""}
+      </span>
+    </div>
+  );
+}
+function RankingMethod() {
+  return (
+    <details className="ranking-method">
+      <summary>
+        排序依据 · 下载量不等于用户数 <CircleHelp size={14} />
+      </summary>
+      <div>
+        <p>
+          “用户规模”以 npm 周下载量作为参考，不代表真实用户数；下载含
+          CI、重复安装和间接依赖。统计周期：{metrics.period.start} 至{" "}
+          {metrics.period.end}。Stars 统计整个源码仓库，npm
+          仅统计所列代表包，多包仓库不累加；CLI、组件、服务端项目之间不可直接推断用户规模。
+        </p>
+        <p>
+          综合分对两项指标各给 50% 权重：50 × min(1, log10(1 + Stars) / 6) + 50
+          × min(1, log10(1 + 周下载量) /
+          9)。对数刻度降低超大项目的量级差异；缺失值不记为零，完整数据优先，缺失项排后并按
+          Stars 排序。同分按 Stars、技术 ID 排序。
+        </p>
+        <p>
+          场景推荐先检查职责、生态和运行条件，再比较热度；归档项目不参与首选。热度不能代替能力与许可证核验。
+          <a
+            href={`${repo}/blob/main/docs/ranking.md`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            查看完整方法与来源 ↗
+          </a>
+        </p>
+      </div>
+    </details>
+  );
+}
 
 type Tech = (typeof catalog.technologies)[number];
 type View = "catalog" | "scenarios" | "skill";
@@ -45,7 +216,6 @@ const colors = [
   "#a75668",
   "#227c83",
 ];
-const favorites = ["react", "vue", "nextjs", "astro", "vite", "typescript"];
 function download(name: string, content: string) {
   const url = URL.createObjectURL(
     new Blob([content], { type: "text/markdown;charset=utf-8" }),
@@ -149,6 +319,11 @@ export default function App() {
   const params = new URLSearchParams(location.search);
   const [view, setView] = useState<View>(getView);
   const [query, setQuery] = useState(params.get("q") || "");
+  const [ranking, setRanking] = useState(
+    Object.hasOwn(rankingModes, params.get("ranking") || "")
+      ? params.get("ranking")!
+      : "popularity",
+  );
   const [stage, setStage] = useState(
     catalog.stages.some((s) => s.id === params.get("stage"))
       ? params.get("stage")!
@@ -188,7 +363,7 @@ export default function App() {
   const [scenarioQuery, setScenarioQuery] = useState("");
   const [scenarioGroup, setScenarioGroup] = useState("all");
   const [limit, setLimit] = useState(24);
-  useEffect(() => setLimit(24), [query, stage, eco]);
+  useEffect(() => setLimit(24), [query, stage, eco, ranking]);
   const searchRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     const onHash = () => {
@@ -212,6 +387,7 @@ export default function App() {
   useEffect(() => {
     const p = new URLSearchParams();
     if (query) p.set("q", query);
+    if (ranking !== "popularity") p.set("ranking", ranking);
     if (stage !== "all") p.set("stage", stage);
     if (eco !== "all") p.set("eco", eco);
     if (detail) p.set("tech", detail.id);
@@ -225,7 +401,7 @@ export default function App() {
       "",
       `${location.pathname}${p.size ? "?" + p : ""}#${view}`,
     );
-  }, [query, stage, eco, detail, view, scenario, preference, hosting]);
+  }, [query, stage, eco, detail, view, scenario, preference, hosting, ranking]);
   useEffect(() => {
     if (!toast) return;
     const t = setTimeout(() => setToast(""), 3500);
@@ -238,17 +414,17 @@ export default function App() {
       stage,
       ecosystem: eco,
     }) as Tech[];
-    return stage === "all" && !query
-      ? data.sort(
-          (a, b) =>
-            (favorites.includes(a.id) ? favorites.indexOf(a.id) : 99) -
-            (favorites.includes(b.id) ? favorites.indexOf(b.id) : 99),
-        )
-      : data;
-  }, [query, stage, eco]);
+    return sortTechnologies(data, metrics, ranking) as Tech[];
+  }, [query, stage, eco, ranking]);
   const recommendation = useMemo(
-    () => recommend(scenarios, { scenario, ecosystem: preference, hosting }),
-    [scenario, preference, hosting],
+    () =>
+      recommendRanked(
+        scenarios,
+        { scenario, ecosystem: preference, hosting, ranking },
+        catalog,
+        metrics,
+      ),
+    [scenario, preference, hosting, ranking],
   );
   const prerequisite =
     hosting === "static"
@@ -312,6 +488,7 @@ export default function App() {
         <span className="eco-label">{tech.ecosystem}</span>
       </div>
       <p className="card-description">{tech.description}</p>
+      <Metrics id={tech.id} />
       <div className="fit-line">
         <span>适合</span>
         <p>{tech.bestFor}</p>
@@ -498,6 +675,12 @@ export default function App() {
                       {results.length} 项技术
                     </span>
                   </div>
+                  <RankingControl
+                    label="目录排序"
+                    value={ranking}
+                    onChange={setRanking}
+                  />
+                  <RankingMethod />
                   {(stage !== "all" || query || eco !== "all") && (
                     <div className="filter-summary">
                       <SlidersHorizontal size={13} />
@@ -550,6 +733,37 @@ export default function App() {
                   )}
                 </section>
                 <aside className="reading-rail">
+                  <div className="community-panel">
+                    <div className="rail-label">
+                      <TrendingUp size={17} />
+                      当前筛选 · 社区热度
+                    </div>
+                    <h2>让选择有据可依。</h2>
+                    <p>
+                      按{rankingModes[ranking as keyof typeof rankingModes]}
+                      排序，查看当前结果中的领先项目。
+                    </p>
+                    <ol>
+                      {results.slice(0, 3).map((t, i) => (
+                        <li key={t.id}>
+                          <span>{String(i + 1).padStart(2, "0")}</span>
+                          <button onClick={() => setDetail(t)}>
+                            {t.name}
+                            <small>
+                              {ranking === "downloads"
+                                ? `${number(metrics.entries[t.id]?.npm?.downloads)} 下载/周`
+                                : ranking === "stars"
+                                  ? `${number(metrics.entries[t.id]?.stars)} Stars`
+                                  : `${popularityScore(metrics.entries[t.id])?.toFixed(1) ?? "未计算"} 综合分`}
+                            </small>
+                          </button>
+                        </li>
+                      ))}
+                    </ol>
+                    <a href="#scenarios">
+                      结合场景查看推荐 <ArrowRight size={15} />
+                    </a>
+                  </div>
                   <div className="guide-panel">
                     <div className="rail-label">
                       <Network size={17} />
@@ -603,7 +817,7 @@ export default function App() {
                   <div className="note">
                     <BookOpen size={16} />
                     <p>
-                      技术能力附官方来源；推荐是基于约束的编辑判断，不是热度排名。
+                      技术能力附官方来源；推荐结合场景约束与社区指标，热度不代替适配判断。
                     </p>
                   </div>
                 </aside>
@@ -737,6 +951,12 @@ export default function App() {
                       </select>
                     </label>
                   </div>
+                  <RankingControl
+                    label="推荐排序"
+                    value={ranking}
+                    onChange={setRanking}
+                  />
+                  <RankingMethod />
                   {prerequisite && (
                     <div className="prerequisite" role="note">
                       <CircleHelp size={17} />
@@ -760,6 +980,85 @@ export default function App() {
                       </div>
                       <ArrowUpRight size={18} />
                     </button>
+                  </div>
+                  <Metrics id={recommendation.primary} />
+                  <div className="candidate-ranking">
+                    <div className="section-label">
+                      可比较候选{" "}
+                      <span>
+                        {recommendation.ranking.candidates.length} 项 · 按
+                        {rankingModes[ranking as keyof typeof rankingModes]}
+                      </span>
+                    </div>
+                    <ol>
+                      {recommendation.ranking.candidates.map(
+                        (
+                          entry: {
+                            id: string;
+                            stars: number | null;
+                            downloads: number | null;
+                            score: number | null;
+                            activeUpstream: string | null;
+                          },
+                          index: number,
+                        ) => (
+                          <li
+                            key={entry.id}
+                            className={
+                              entry.id === recommendation.primary
+                                ? "is-recommended"
+                                : ""
+                            }
+                          >
+                            <span className="rank-number">
+                              {String(index + 1).padStart(2, "0")}
+                            </span>
+                            <button onClick={() => setDetail(byId(entry.id))}>
+                              {byId(entry.id).name}
+                              {entry.activeUpstream && (
+                                <small className="metric-caveat">
+                                  Stars 来自迁移前镜像
+                                </small>
+                              )}
+                              {entry.id === recommendation.primary && (
+                                <small>当前首选</small>
+                              )}
+                            </button>
+                            <div>
+                              {ranking !== "stars" && (
+                                <span>{number(entry.stars)} Stars</span>
+                              )}
+                              {ranking !== "downloads" && (
+                                <span>
+                                  {entry.downloads == null
+                                    ? "npm 未提供"
+                                    : `${number(entry.downloads)} 下载/周`}
+                                </span>
+                              )}
+                            </div>
+                            <strong>
+                              {ranking === "stars"
+                                ? number(entry.stars)
+                                : ranking === "downloads"
+                                  ? number(entry.downloads)
+                                  : entry.score === null
+                                    ? "—"
+                                    : entry.score.toFixed(1)}
+                              <small>
+                                {ranking === "stars"
+                                  ? "Stars"
+                                  : ranking === "downloads"
+                                    ? "下载/周"
+                                    : "综合分"}
+                              </small>
+                            </strong>
+                          </li>
+                        ),
+                      )}
+                    </ol>
+                    <p className="fine-print">
+                      只比较同职责且符合生态约束的候选；其他路线在下方说明。
+                    </p>
                   </div>
                   <div className="section-label">
                     建议组合{" "}
@@ -1086,6 +1385,10 @@ export default function App() {
           </div>
           <p className="detail-description">{detail.description}</p>
           <div className="detail-section">
+            <h3>社区规模与数据来源</h3>
+            <Metrics id={detail.id} full />
+          </div>
+          <div className="detail-section">
             <h3>适合什么场景</h3>
             <p>{detail.bestFor}</p>
           </div>
@@ -1186,6 +1489,44 @@ export default function App() {
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <th>GitHub Stars</th>
+                  {selectedTechs.map((t) => (
+                    <td key={t.id}>
+                      <a
+                        href={metrics.entries[t.id]?.starsSourceUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {metrics.entries[t.id]?.stars.toLocaleString() ??
+                          "未提供"}
+                      </a>
+                    </td>
+                  ))}
+                </tr>
+                <tr>
+                  <th>
+                    npm 周下载量<small>采用规模参考，非用户数</small>
+                  </th>
+                  {selectedTechs.map((t) => (
+                    <td key={t.id}>
+                      {metrics.entries[t.id]?.npm ? (
+                        <a
+                          href={metrics.entries[t.id].npm!.sourceUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {metrics.entries[
+                            t.id
+                          ].npm!.downloads.toLocaleString()}
+                          <small>{metrics.entries[t.id].npm!.package}</small>
+                        </a>
+                      ) : (
+                        "未提供"
+                      )}
+                    </td>
+                  ))}
+                </tr>
                 {[
                   ["kind", "技术角色"],
                   ["description", "解决什么"],

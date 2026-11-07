@@ -1,4 +1,7 @@
 node_modules/
+.cache/
+src/data/metrics.json.tmp
+public/metrics.json
 dist/
 *.tsbuildinfo
 .DS_Store

@@ -6,6 +6,7 @@ import {
   recommend,
   filterCatalog,
   recommendationMarkdown,
+  recommendRanked,
 } from "../src/engine.mjs";
 const c = JSON.parse(
   readFileSync(new URL("../src/data/catalog.json", import.meta.url)),
@@ -14,6 +15,9 @@ const s = JSON.parse(
   readFileSync(new URL("../src/data/scenarios.json", import.meta.url)),
 );
 const ids = new Set(c.technologies.map((t) => t.id));
+const m = JSON.parse(
+  readFileSync(new URL("../src/data/metrics.json", import.meta.url)),
+);
 test("every scenario / ecosystem / deployment combination resolves to unique open-source entries", () => {
   for (const scenario of s)
     for (const ecosystem of ["any", "React", "Vue", "Svelte", "Angular"])
@@ -123,7 +127,7 @@ test("portable CLI matches website results and rejects unknown options", () => {
       { encoding: "utf8" },
     ),
   );
-  assert.deepEqual(result, recommend(s, { scenario: "game-2d" }));
+  assert.deepEqual(result, recommendRanked(s, { scenario: "game-2d" }, c, m));
   assert.notEqual(
     spawnSync(process.execPath, [
       "skills/frontend-stack-advisor/scripts/recommend.mjs",

@@ -1,4 +1,164 @@
 /** Shared deterministic rules. Used by the website, tests and portable skill CLI. */
+export const rankingModes = {
+  popularity: "综合热度",
+  stars: "GitHub Stars",
+  downloads: "npm 周下载量",
+};
+// Fixed log scales prevent a very large package from overwhelming the other signal.
+export function popularityScore(metric) {
+  if (
+    !Number.isFinite(metric?.stars) ||
+    !Number.isFinite(metric?.npm?.downloads)
+  )
+    return null;
+  return (
+    50 * Math.min(1, Math.log10(1 + metric.stars) / 6) +
+    50 * Math.min(1, Math.log10(1 + metric.npm.downloads) / 9)
+  );
+}
+export function sortTechnologies(items, metrics, mode = "popularity") {
+  if (!Object.hasOwn(rankingModes, mode))
+    throw new Error("Unknown ranking mode");
+  const value = (t) => {
+    const m = metrics.entries[t.id];
+    return mode === "stars"
+      ? m?.stars
+      : mode === "downloads"
+        ? m?.npm?.downloads
+        : popularityScore(m);
+  };
+  return [...items].sort((a, b) => {
+    const av = value(a),
+      bv = value(b);
+    const aKnown = Number.isFinite(av),
+      bKnown = Number.isFinite(bv);
+    if (aKnown !== bKnown) return aKnown ? -1 : 1;
+    if (aKnown && av !== bv) return bv - av;
+    return (
+      (metrics.entries[b.id]?.stars ?? -1) -
+        (metrics.entries[a.id]?.stars ?? -1) || a.id.localeCompare(b.id, "en")
+    );
+  });
+}
+
+/** Rank complete scenario plans only after role and ecosystem constraints. */
+export function recommendRanked(scenarios, options, catalog, metrics) {
+  const mode = options.ranking || "popularity";
+  const base = recommend(scenarios, options);
+  const recipe = scenarios.find((s) => s.id === base.id);
+  const lookup = (id) => catalog.technologies.find((t) => t.id === id);
+  const ecosystem = options.ecosystem || "any";
+  const peerIds = [
+    ...new Set([base.primary, ...(recipe.rankingPeers || [recipe.primary])]),
+  ];
+  const eligible = peerIds
+    .map(lookup)
+    .filter(
+      (t) =>
+        t &&
+        (!metrics.entries[t.id]?.archived ||
+          metrics.entries[t.id]?.activeUpstream) &&
+        (ecosystem === "any" ||
+          t.ecosystem === "通用" ||
+          t.ecosystem === ecosystem) &&
+        !(
+          ecosystem !== "any" &&
+          ["content", "dashboard", "commerce", "saas"].includes(base.id) &&
+          t.id !== base.primary
+        ) &&
+        !(
+          base.id === "library" &&
+          ecosystem === "Angular" &&
+          t.id !== "angular"
+        ),
+    );
+  const ordered = sortTechnologies(eligible, metrics, mode);
+  const winner = ordered[0]?.id || base.primary;
+  let result = base;
+  if (winner !== base.primary) {
+    const selected = lookup(winner);
+    const candidate = {
+      ...recipe,
+      primary: winner,
+      tools: recipe.tools
+        .map((id) => (id === recipe.primary ? winner : id))
+        .filter(
+          (id) => !(winner === "babylonjs" && id === "react-three-fiber"),
+        ),
+      reason: `${selected.name} 在符合本场景职责与生态约束的候选中按${rankingModes[mode]}优先。采用条件：${recipe.alternativeReasons[winner] || selected.bestFor}`,
+      alternatives: [
+        ...new Set([recipe.primary, ...recipe.alternatives]),
+      ].filter((id) => id !== winner),
+      alternativeReasons: {
+        ...recipe.alternativeReasons,
+        [recipe.primary]: recipe.reason,
+      },
+      tradeoff: recipe.tradeoff,
+    };
+    const frameworkEcosystems = {
+      react: "React",
+      vue: "Vue",
+      angular: "Angular",
+      svelte: "Svelte",
+      nextjs: "React",
+      nuxt: "Vue",
+      sveltekit: "Svelte",
+    };
+    result = recommend(
+      scenarios.map((s) => (s.id === recipe.id ? candidate : s)),
+      {
+        ...options,
+        ecosystem:
+          ecosystem === "any"
+            ? frameworkEcosystems[winner] || "any"
+            : ecosystem,
+      },
+    );
+    result.constraints = base.constraints;
+  }
+  const candidates = ordered.map((t) => {
+    const m = metrics.entries[t.id];
+    return {
+      id: t.id,
+      score: popularityScore(m),
+      stars: m?.stars ?? null,
+      downloads: m?.npm?.downloads ?? null,
+      npmPackage: m?.npm?.package ?? null,
+      archived: m?.archived ?? false,
+      activeUpstream: m?.activeUpstream ?? null,
+      starsSourceUrl: m?.starsSourceUrl ?? null,
+      downloadsSourceUrl: m?.npm?.sourceUrl ?? null,
+    };
+  });
+  result.ranking = {
+    mode,
+    updatedAt: metrics.updatedAt,
+    period: metrics.period,
+    candidates,
+    fitPrimary: base.primary,
+  };
+  result.notes.push(
+    `先检查职责与生态，再按${rankingModes[mode]}排序；${ordered.length} 个可比较候选。`,
+  );
+  for (const candidate of candidates) {
+    if (candidate.archived && candidate.activeUpstream)
+      result.notes.push(
+        `${lookup(candidate.id).name} 已迁移至 ${candidate.activeUpstream}；Stars 是已归档 GitHub 镜像的历史关注数，不能反映迁移后的完整社区规模。`,
+      );
+  }
+  if (!ordered.length)
+    result.warnings.push(
+      "没有未归档的兼容候选；保留原场景方案供评估，不能视为当前社区推荐。",
+    );
+  result.alternatives = sortTechnologies(
+    result.alternatives.map(lookup),
+    metrics,
+    mode,
+  ).map((t) => t.id);
+  result.confidence =
+    "采用前用真实项目验证性能、兼容性与维护成本；热度不能代替这些判断。";
+  return result;
+}
 export function filterCatalog(
   catalog,
   { query = "", stage = "all", ecosystem = "all" } = {},
@@ -202,11 +362,13 @@ export function recommend(
         "angular",
         "expo",
         "wxt",
+        "plasmo",
       ].includes(t),
     )
   )
     tools = tools.filter((t) => t !== "vite");
   else if (
+    scenario !== "library" &&
     tools.some((t) => ["react", "vue", "svelte"].includes(t)) &&
     !tools.includes("rollup")
   )
@@ -253,7 +415,11 @@ export function recommend(
 }
 export function recommendationMarkdown(result, catalog) {
   const lookup = (id) => catalog.technologies.find((t) => t.id === id);
-  return `# ${result.name} · 技术选型建议\n\n目标：${result.goal}\n\n约束：生态 ${result.constraints.ecosystem === "any" ? "不限" : result.constraints.ecosystem}；托管 ${{ any: "不限", static: "仅静态", server: "可运行服务端" }[result.constraints.hosting]}\n\n## 推荐组合\n\n${result.tools
+  const ranking = result.ranking;
+  const evidence = ranking
+    ? `## 社区指标与排序\n\n排序：${rankingModes[ranking.mode]}；快照：${ranking.updatedAt}；npm 周期：${ranking.period.start} 至 ${ranking.period.end}。下载次数不等于真实用户数。综合分 = 50 × min(1, log10(1 + stars) / 6) + 50 × min(1, log10(1 + 周下载) / 9)；缺失指标不计零，完整数据优先。\n\n${ranking.candidates.map((m, i) => `${i + 1}. ${lookup(m.id).name} — [${m.stars ?? "未知"} stars](${m.starsSourceUrl || lookup(m.id).repository})；${m.downloads === null ? "npm 未提供" : `[${m.downloads} 次/周](${m.downloadsSourceUrl})（${m.npmPackage}）`}；综合分 ${m.score === null ? "未计算" : m.score.toFixed(1)}`).join("\n")}\n\n仅同职责、兼容候选参与首选竞争；跨层方案仍需单独评估。\n\n`
+    : "";
+  return `# ${result.name} · 技术选型建议\n\n目标：${result.goal}\n\n约束：生态 ${result.constraints.ecosystem === "any" ? "不限" : result.constraints.ecosystem}；托管 ${{ any: "不限", static: "仅静态", server: "可运行服务端" }[result.constraints.hosting]}\n\n${evidence}## 推荐组合\n\n${result.tools
     .map((id) => {
       const t = lookup(id);
       return `- [${t.name}](${t.url})：${t.kind} — ${t.bestFor}；[源码](${t.repository}) · [${t.license}](${t.licenseUrl})`;

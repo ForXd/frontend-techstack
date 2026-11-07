@@ -3,6 +3,37 @@ import { readFile } from "node:fs/promises";
 const read = (path) => readFile(path, "utf8").then(JSON.parse);
 const c = await read("src/data/catalog.json"),
   scenarios = await read("src/data/scenarios.json");
+const metrics = await read("src/data/metrics.json");
+const metricSources = await read("src/data/metrics-sources.json");
+assert.equal(metrics.schemaVersion, 1);
+assert.ok(Number.isFinite(Date.parse(metrics.updatedAt)));
+assert.deepEqual(
+  Object.keys(metrics.entries).sort(),
+  c.technologies.map((t) => t.id).sort(),
+);
+assert.deepEqual(
+  Object.keys(metricSources).sort(),
+  Object.keys(metrics.entries).sort(),
+);
+for (const t of c.technologies) {
+  const m = metrics.entries[t.id];
+  assert.ok(
+    Number.isSafeInteger(m.stars) && m.stars >= 0,
+    `${t.id}: invalid stars`,
+  );
+  assert.equal(typeof m.archived, "boolean");
+  assert.equal(m.activeUpstream, metricSources[t.id].activeUpstream || null);
+  if (m.activeUpstream) assert.equal(t.repository, m.activeUpstream);
+  assert.ok(Number.isFinite(Date.parse(m.observedAt)));
+  assert.equal(new URL(m.starsSourceUrl).hostname, "api.github.com");
+  if (m.npm) {
+    assert.equal(m.npm.package, metricSources[t.id].npmPackage);
+    assert.ok(Number.isSafeInteger(m.npm.downloads) && m.npm.downloads >= 0);
+    assert.equal(m.npm.start, metrics.period.start);
+    assert.equal(m.npm.end, metrics.period.end);
+    assert.equal(new URL(m.npm.sourceUrl).hostname, "api.npmjs.org");
+  } else assert.equal(metricSources[t.id].npmPackage, null);
+}
 const licenses = new Set([
   "MIT",
   "Apache-2.0",
@@ -50,12 +81,15 @@ for (const t of c.technologies) {
 }
 assert.equal(new Set(scenarios.map((s) => s.id)).size, scenarios.length);
 for (const s of scenarios) {
+  assert.ok(s.rankingPeers.includes(s.primary));
+  for (const id of s.rankingPeers)
+    assert.ok([s.primary, ...s.alternatives].includes(id));
   for (const id of [s.primary, ...s.alternatives, ...s.tools])
     assert.ok(ids.has(id), `${s.id}: unknown ${id}`);
   assert.ok(s.tools.includes(s.primary));
   assert.ok(s.reason && s.tradeoff && s.group);
 }
-for (const name of ["catalog", "scenarios"])
+for (const name of ["catalog", "scenarios", "metrics"])
   assert.equal(
     await readFile(`src/data/${name}.json`, "utf8"),
     await readFile(
